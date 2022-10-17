@@ -1,0 +1,50 @@
+.card_container
+{
+    height: 310px;
+    width: 230px;
+    background: #161b22;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: 300ms;
+}
+.card_container:hover
+{
+    transform: scale(1.1);
+}
+.country_flag_img
+{
+    width: 100%;
+    max-height: 150px;
+}
+.flag_description
+{
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    width: 100%;
+    padding: 20px;
+}
+.flag_name
+{
+    color: rgb(238, 238, 238);
+    font-size: 300;
+}
+.description_container
+{
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    margin-top: 11px;
+}
+.description_span
+{
+    color: white;
+    font-size: 14px;
+}
+.description_display
+{
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.59);
+}
