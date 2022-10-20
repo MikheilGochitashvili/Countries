@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/MikheilGochitashvili/Countries/static/css/main.a0f0f689.css",
-    "main.js": "/MikheilGochitashvili/Countries/static/js/main.11c84d37.js",
-    "index.html": "/MikheilGochitashvili/Countries/index.html",
-    "main.a0f0f689.css.map": "/MikheilGochitashvili/Countries/static/css/main.a0f0f689.css.map",
-    "main.11c84d37.js.map": "/MikheilGochitashvili/Countries/static/js/main.11c84d37.js.map"
+    "main.css": "/mikheilgochitashvili/Countries/static/css/main.a0f0f689.css",
+    "main.js": "/mikheilgochitashvili/Countries/static/js/main.11c84d37.js",
+    "index.html": "/mikheilgochitashvili/Countries/index.html",
+    "main.a0f0f689.css.map": "/mikheilgochitashvili/Countries/static/css/main.a0f0f689.css.map",
+    "main.11c84d37.js.map": "/mikheilgochitashvili/Countries/static/js/main.11c84d37.js.map"
   },
   "entrypoints": [
     "static/css/main.a0f0f689.css",
