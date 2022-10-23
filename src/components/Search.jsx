@@ -2,8 +2,7 @@ import "../css/Search.css";
 import SearchLogo from "../IMG/search_logo.png";
 import {useState} from "react";
 
-const Search = ({setSearchQuery}) => {
-  const [show, setShow] = useState("Filter By Region");
+const Search = ({setSearchQuery, setShow, show}) => {
   const [rotate, setRotate] = useState(false);
   return (
     <div className="search_container">
@@ -25,25 +24,20 @@ const Search = ({setSearchQuery}) => {
         }}
       >
         <div className="menu_dd_button">
-          <span>{show}</span>
+          <span>
+            Filter By Region: <span id="show">{show}</span>
+          </span>
           <div className={`arrow ${rotate ? "rotate" : ""}`}></div>
         </div>
         <div
           className="options_contaienr"
           style={{display: rotate ? "flex" : "none"}}
         >
-          <span
-            value={"Africa"}
-            onClick={(e) => {
-              setShow(e.currentTarget.value);
-            }}
-          >
-            Africa
-          </span>
-          <span value={"America"}>America</span>
-          <span value={"Asia"}>Asia</span>
-          <span value={"Europe"}>Europe</span>
-          <span value={"Oceania"}>Oceania</span>
+          <span onClick={() => setShow("Africa")}>Africa</span>
+          <span onClick={() => setShow("America")}>America</span>
+          <span onClick={() => setShow("Asia")}>Asia</span>
+          <span onClick={() => setShow("Europe")}>Europe</span>
+          <span onClick={() => setShow("Oceania")}>Oceania</span>
         </div>
       </div>
     </div>

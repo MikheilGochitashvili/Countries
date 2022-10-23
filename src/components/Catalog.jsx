@@ -8,14 +8,19 @@ import "../css/Catalog.css";
 const Catalog = () => {
   const [countries, setCountries] = useState(data);
   const [searchQuery, setSearchQuery] = useState("");
-  
+  const [show, setShow] = useState("");
+
   useEffect(() => {
-    setCountries(data.filter((item) => item.name.toLowerCase().includes(searchQuery)));
-  }, [searchQuery]);
+    setCountries(
+      data.filter((item) => 
+        item.name.toLowerCase().includes(searchQuery.toLowerCase())
+        ).filter((item) => item.region.includes(show))
+    );
+  }, [searchQuery, show]);
 
   return (
     <div className="catalog">
-      <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+      <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} show={show} setShow={setShow}/>
       {countries.map((item) => {
         return (
           <Card

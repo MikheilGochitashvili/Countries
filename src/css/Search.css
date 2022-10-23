@@ -39,17 +39,21 @@
     background: #fff;
     border-radius: 7px;
     gap: 15px;
-    width: 175px;
+    width: 221px;
 }
 .menu_dd_button span
 {
     color: black;
+    font-size: 13px;
 }
 .options_contaienr span:hover
 {
     font-weight: 700;
 }
-
+#show
+{
+    font-weight: 700;
+}
 .arrow
 {
     margin-bottom: 1px;

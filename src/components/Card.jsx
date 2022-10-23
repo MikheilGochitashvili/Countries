@@ -1,8 +1,9 @@
 import "../css/Card.css";
-
+import {useNavigate} from "react-router-dom";
 const Card = (props) => {
+  const location = useNavigate();
   return (
-    <div className="card_container">
+    <div className="card_container" onClick={() => location(`/${props.name}`)}>
       <div className="flag_container">
         <img src={props.img} alt="klm" className="country_flag_img" />
       </div>

@@ -5,8 +5,8 @@ const Header = () => {
   return (
     <header>
       <div>
-        <Link to="/" className="header_title_link">
-          <span className="header_title">Where in the world?</span>
+        <Link to="/Countries" className="header_title_link">
+          <span className="header_title" onClick={() => window.location.reload()}>Where in the world?</span>
         </Link>
       </div>
       <div className="appereance_mode_change_container">
