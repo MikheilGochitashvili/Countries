@@ -3,7 +3,6 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 40px 100px;
 }
 .search_input_wrapper
 {
@@ -86,8 +85,8 @@
     z-index: 100;
 }
 @keyframes move {
-    from {top: -15px}
-    to {top: 0px}
+    from {top: 25px}
+    to {top: 50px}
 }
 .options_contaienr a
 {

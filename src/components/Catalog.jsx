@@ -1,11 +1,22 @@
 import data from "../countries.json";
 import Card from "./Card";
+import {useEffect} from "react";
+import Search from "./Search";
+import {useState} from "react";
 import "../css/Catalog.css";
 
 const Catalog = () => {
+  const [countries, setCountries] = useState(data);
+  const [searchQuery, setSearchQuery] = useState("");
+  
+  useEffect(() => {
+    setCountries(data.filter((item) => item.name.toLowerCase().includes(searchQuery)));
+  }, [searchQuery]);
+
   return (
     <div className="catalog">
-      {data.map((item) => {
+      <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+      {countries.map((item) => {
         return (
           <Card
             img={item.flags.png}
