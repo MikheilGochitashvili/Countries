@@ -16,6 +16,8 @@
     border-radius: 7px;
     width: 308px;
     border: none;
+    color: white;
+    background: #161b22;
 }
 .search_input:focus
 {
@@ -36,17 +38,17 @@
     padding: 0px 16px;
     justify-content: space-between;
     cursor: pointer;
-    background: #fff;
+    background: #161b22;
     border-radius: 7px;
     gap: 15px;
     width: 221px;
 }
 .menu_dd_button span
 {
-    color: black;
+    color: rgb(203 203 203);
     font-size: 13px;
 }
-.options_contaienr span:hover
+.options_container span:hover
 {
     font-weight: 700;
 }
@@ -57,7 +59,7 @@
 .arrow
 {
     margin-bottom: 1px;
-    border: solid black;
+    border: solid rgb(203 203 203);
     border-width: 0 2px 2px 0;
     display: inline-block;
     padding: 3px;
@@ -73,12 +75,12 @@
     transform: rotate(-135deg);
     margin-top: 7px;
 }
-.options_contaienr
+.options_container
 {
     padding: 20px;
     width: 100%;
     border-radius: 7px;
-    background: rgb(255, 255, 255);
+    background: #161b22;
     flex-direction: column;
     gap: 8px;
     position: relative;
@@ -92,8 +94,8 @@
     from {top: 25px}
     to {top: 50px}
 }
-.options_contaienr a
+.options_container span
 {
     text-decoration: none;
-    color: black;
+    color: rgb(240, 240, 240);
 }

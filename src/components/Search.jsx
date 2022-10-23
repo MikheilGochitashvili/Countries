@@ -30,7 +30,7 @@ const Search = ({setSearchQuery, setShow, show}) => {
           <div className={`arrow ${rotate ? "rotate" : ""}`}></div>
         </div>
         <div
-          className="options_contaienr"
+          className="options_container"
           style={{display: rotate ? "flex" : "none"}}
         >
           <span onClick={() => setShow("Africa")}>Africa</span>
