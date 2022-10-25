@@ -23,6 +23,7 @@ const Catalog = ({mode, setmode}) => {
   return (
     <div className="catalog" style={{background: mode ? "#eaeaea" : "#010409"}}>
       <Search
+        mode={mode}
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
         show={show}
@@ -31,6 +32,7 @@ const Catalog = ({mode, setmode}) => {
       {countries.map((item) => {
         return (
           <Card
+            mode={mode}
             img={item.flags.png}
             name={item.name}
             population={item.population}
