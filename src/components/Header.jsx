@@ -1,14 +1,13 @@
 import "../css/Header.css";
 import light_mode_logo from "../IMG/light_mode.png";
 import night_mode_logo from '../IMG/night_mode.png';
-import {Link} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 const Header = ({mode, setMode}) => {
+  const navigate = useNavigate();
   return (
     <header style={{background: mode ? 'white' : '#161b22'}}>
       <div>
-        <Link to="/Countries" className="header_title_link">
-          <span style={{color: mode ? '#03031d' : 'white'}} className="header_title" onClick={() => window.location.reload()}>Where in the world?</span>
-        </Link>
+          <span style={{color: mode ? '#03031d' : 'white'}} className="header_title" onClick={() => navigate('/Countries')}>Where in the world?</span>
       </div>
       <div className="appereance_mode_change_container" style={{borderBottom: mode ? '1px solid  #03031d' : '1px solid white'}} onClick={() => {
         setMode(!mode)

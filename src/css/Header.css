@@ -7,6 +7,7 @@ header
     justify-content: space-between;
     padding: 0px 100px;
     align-items: center;
+    transition: 200ms;
 }
 .header_title
 {
@@ -33,7 +34,6 @@ header
 }
 .appereance_mode_change_container span
 {
-    color: #fffafacc;
     font-weight: 400;
     pointer-events: none;
 }

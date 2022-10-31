@@ -1,0 +1,38 @@
+.individual-page-container
+{
+    height: calc(100vh - 76px);
+}
+.go_back_btn
+{
+    width: 150px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+    background: white;
+    border-radius: 13px;
+    transition: 300ms;
+}
+.individual-page-header
+{
+    height: 200px;
+    display: flex;
+    align-items: center;
+    padding-left: 100px;
+}
+#arrow
+{
+    width: 30px;
+}
+.go_back_btn span
+{
+    font-size: 18px;
+    color: #161b22;
+    transition: 300ms;
+}
+.individual_page_content_container
+{
+    padding: 0px 100px;
+    width: 100%;
+}
