@@ -33,6 +33,35 @@
 }
 .individual_page_content_container
 {
+    display: flex;
     padding: 0px 100px;
-    width: 100%;
+    gap: 100px;
+    flex-direction: row;
+}
+.des-left
+{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+.individual-flag-des
+{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    gap: 220px;
+}
+.des-right
+{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+#des-span
+{
+    color: grey;
+}
+.border-c-container
+{
+    margin-top: 50px;
 }

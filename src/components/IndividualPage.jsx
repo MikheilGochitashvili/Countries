@@ -28,12 +28,64 @@ const IndividualPage = ({mode}) => {
         </div>
       </div>
       <div className="individual_page_content_container">
-          <div className="individual-flag-container">
-            <img src={country[0].flags.png} alt="individual-flag" className="individual-flag"/>
+        <div className="individual-flag-container">
+          <img
+            src={country[0].flags.png}
+            alt="individual-flag"
+            className="individual-flag"
+          />
+        </div>
+        <div className="individual-flag-content">
+          <div>
+            <h1 style={{color: mode ? "black" : "white"}}>{country[0].name}</h1>
           </div>
-          <div className="individual-flag-content">
-            
+          <div className="individual-flag-des">
+            <div className="des-left">
+              <span style={{color: mode ? "black" : "white"}}>
+                Native Name: <span id="des-span">{country[0].nativeName}</span>
+              </span>
+              <span style={{color: mode ? "black" : "white"}}>
+                Population: <span id="des-span">{country[0].population}</span>
+              </span>
+              <span style={{color: mode ? "black" : "white"}}>
+                Region: <span id="des-span">{country[0].region}</span>
+              </span>
+              <span style={{color: mode ? "black" : "white"}}>
+                Sub Region: <span id="des-span">{country[0].subregion}</span>
+              </span>
+              <span style={{color: mode ? "black" : "white"}}>
+                Capital: <span id="des-span">{country[0].capital}</span>
+              </span>
+            </div>
+            <div className="des-right">
+              <span style={{color: mode ? "black" : "white"}}>
+                Top Level Domain:{" "}
+                <span id="des-span">{country[0].topLevelDomain}</span>
+              </span>
+              <span style={{color: mode ? "black" : "white"}}>
+                Currencies:{" "}
+                {country[0].currencies.map((item) => {
+                  return <span id="des-span">{item.name}</span>;
+                })}
+              </span>
+              <span style={{color: mode ? "black" : "white"}}>
+                Languages:{" "}
+                {country[0].languages.map((item) => {
+                  return <span id="des-span">{item.name}</span>;
+                })}
+              </span>
+            </div>
           </div>
+          <div className="border-c-container">
+            {/* <span style={{color: mode ? "black" : "white"}}>Border Countries: {country[0].borders.map((item) => {
+              return (
+                <div className="border-btn">
+                    {item.bo}
+                </div>
+              )
+            })}</span> */}
+          </div>
+        </div>
       </div>
     </div>
   );
