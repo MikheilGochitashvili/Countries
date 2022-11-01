@@ -27,7 +27,10 @@ const IndividualPage = ({mode}) => {
           <span style={{color: mode ? "#161B22" : "#fff"}}>Back</span>
         </div>
       </div>
-      <div className="individual_page_content_container" id="individual_page_content_container">
+      <div
+        className="individual_page_content_container"
+        id="individual_page_content_container"
+      >
         <div className="individual-flag-container">
           <img
             src={country[0].flags.png}
@@ -84,7 +87,9 @@ const IndividualPage = ({mode}) => {
             </div>
           </div>
           <div className="border-c-container">
-            <span style={{color: mode ? "black" : "white"}} >Border Countries:</span>
+            <span style={{color: mode ? "black" : "white"}}>
+              Border Countries:
+            </span>
             {
               country[0].borders.map((item) => {
                 return (
