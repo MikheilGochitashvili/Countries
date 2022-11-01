@@ -27,7 +27,7 @@ const IndividualPage = ({mode}) => {
           <span style={{color: mode ? "#161B22" : "#fff"}}>Back</span>
         </div>
       </div>
-      <div className="individual_page_content_container">
+      <div className="individual_page_content_container" id="individual_page_content_container">
         <div className="individual-flag-container">
           <img
             src={country[0].flags.png}
@@ -39,7 +39,7 @@ const IndividualPage = ({mode}) => {
           <div>
             <h1 style={{color: mode ? "black" : "white"}}>{country[0].name}</h1>
           </div>
-          <div className="individual-flag-des">
+          <div className="individual-flag-des" id="individual-flag-des">
             <div className="des-left">
               <span style={{color: mode ? "black" : "white"}}>
                 Native Name: <span id="des-span">{country[0].nativeName}</span>
@@ -68,22 +68,32 @@ const IndividualPage = ({mode}) => {
                   return <span id="des-span">{item.name}</span>;
                 })}
               </span>
-              <span style={{color: mode ? "black" : "white"}}>
-                Languages:{" "}
-                {country[0].languages.map((item) => {
-                  return <span id="des-span">{item.name}</span>;
-                })}
-              </span>
+              <div style={{display: "flex", flexDirection: "row"}}>
+                <span style={{color: mode ? "black" : "white"}}>
+                  Languages:{" "}
+                  {country[0].languages.map((item) => {
+                    return (
+                      <span id="des-span">
+                        {item.name}
+                        <span> , </span>
+                      </span>
+                    );
+                  })}
+                </span>
+              </div>
             </div>
           </div>
           <div className="border-c-container">
-            {/* <span style={{color: mode ? "black" : "white"}}>Border Countries: {country[0].borders.map((item) => {
-              return (
-                <div className="border-btn">
-                    {item.bo}
-                </div>
-              )
-            })}</span> */}
+            <span style={{color: mode ? "black" : "white"}} >Border Countries:</span>
+            {
+              country[0].borders.map((item) => {
+                return (
+                  <div style={{background: mode ? "white" : "#161b22"}} className="country-btn">
+                    <span style={{color: mode ? "black" : "white"}}>{item}</span>
+                  </div>
+                )
+              })
+            }
           </div>
         </div>
       </div>

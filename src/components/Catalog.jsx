@@ -21,7 +21,7 @@ const Catalog = ({mode, setmode}) => {
   }, [searchQuery, show]);
 
   return (
-    <div className="catalog" style={{background: mode ? "#eaeaea" : "#010409"}}>
+    <div className="catalog" id="catalog" style={{background: mode ? "#eaeaea" : "#010409"}}>
       <Search
         mode={mode}
         searchQuery={searchQuery}

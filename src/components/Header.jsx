@@ -5,11 +5,11 @@ import {useNavigate} from "react-router-dom";
 const Header = ({mode, setMode}) => {
   const navigate = useNavigate();
   return (
-    <header style={{background: mode ? 'white' : '#161b22'}}>
+    <header style={{background: mode ? 'white' : '#161b22'}} className="header">
       <div>
-          <span style={{color: mode ? '#03031d' : 'white'}} className="header_title" onClick={() => navigate('/Countries')}>Where in the world?</span>
+          <span style={{color: mode ? '#03031d' : 'white'}} className="header_title" id="header_title" onClick={() => navigate('/Countries')}>Where in the world?</span>
       </div>
-      <div className="appereance_mode_change_container" style={{borderBottom: mode ? '1px solid  #03031d' : '1px solid white'}} onClick={() => {
+      <div className="appereance_mode_change_container" id="border-none" style={{borderBottom: mode ? '1px solid  #03031d' : '1px solid white'}} onClick={() => {
         setMode(!mode)
       }}>
         <img

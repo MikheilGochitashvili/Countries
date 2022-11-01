@@ -64,4 +64,21 @@
 .border-c-container
 {
     margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+    justify-content: flex-start;
+}
+.country-btn
+{
+    padding: 6px 25px;
+    background: #161b22;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 300ms;
+}
+.country-btn:hover
+{
+    opacity: 0.6;
 }
