@@ -67,9 +67,9 @@ const IndividualPage = ({mode}) => {
               </span>
               <span style={{color: mode ? "black" : "white"}}>
                 Currencies:{" "}
-                {country[0].currencies.map((item) => {
+                {country[0]?.currencies ? country[0]?.currencies.map((item) => {
                   return <span id="des-span">{item.name}</span>;
-                })}
+                }) : <span style={{color: 'red'}}>No Currency</span>}
               </span>
               <div style={{display: "flex", flexDirection: "row"}}>
                 <span style={{color: mode ? "black" : "white"}}>
@@ -91,13 +91,13 @@ const IndividualPage = ({mode}) => {
               Border Countries:
             </span>
             {
-              country[0].borders.map((item) => {
+               country[0]?.borders ? country[0]?.borders.map((item) => {
                 return (
                   <div style={{background: mode ? "white" : "#161b22"}} className="country-btn">
                     <span style={{color: mode ? "black" : "white"}}>{item}</span>
                   </div>
                 )
-              })
+              }) : <span style={{color: 'red'}}>No Borders</span>
             }
           </div>
         </div>
